@@ -1,0 +1,144 @@
+.hero-section {
+  width: 100vw;
+  overflow: hidden;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-info {
+  position: absolute;
+  font-family: "Permanent Marker";
+  margin-top: 20vh;
+  /* margin-left: 10vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 4rem;
+  z-index: 10;
+  animation: appear-down 1s ease-in-out forwards;
+}
+
+.hero-name-underline {
+  width: 20rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-job {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  z-index: 10;
+  animation: appear-down 1s ease-in-out forwards;
+}
+
+.hero-image {
+  height: 12rem;
+  z-index: 10;
+  animation: appear-down 1s ease-in-out forwards;
+  delay: 0.5s;
+}
+
+.hero-swirl {
+  /* height: 200vh;
+  width: 200vw; */
+  position: fixed;
+  right: -24vw;
+  bottom: -8vh;
+  z-index: 0;
+}
+
+.draw-on-load {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.draw-on-load-delay {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear-down {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes appear-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+@media (min-width: 600px) {
+  .hero-swirl {
+    height: 90vh;
+    width: 100vw;
+    bottom: 0vh;
+    right: -24vw;
+  }
+
+  .hero-info {
+    margin-top: 10vh;
+  }
+
+  .hero-name {
+    font-size: 6rem;
+  }
+
+  .hero-name-underline {
+    width: 28rem;
+    top: 7rem;
+    left: 1rem;
+  }
+
+  .hero-job {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .hero-swirl {
+    height: 90vh;
+    width: 100vw;
+    bottom: 0;
+    right: -24vw
+  }
+
+  .hero-section {
+    display: block;
+  }
+
+  .hero-info {
+    margin-left: 10vw;
+  }
+}
