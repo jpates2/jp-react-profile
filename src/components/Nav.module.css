@@ -1,23 +1,33 @@
 @import "../styles/variables.css";
 
-.navbar {
-  /* position: absolute; */
-  top: 0;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+.desk-navbar {
+  display: none;
 }
 
-.navbar-list {
-  font-family: "Permanent Marker";
-  font-size: 1.5rem;
-  display: flex;
-  gap: 2rem;
-}
 
-.navbar-icon {
-  font-size: 1.5rem;
+@media (min-width: 600px) {
+  .mobile-navbar {
+    display: none;
+  }
+
+  .desk-navbar {
+    top: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .desk-navbar-list {
+    font-family: "Permanent Marker";
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .desk-navbar-icon {
+    font-size: 1.5rem;
+  }
 }
