@@ -51,6 +51,7 @@
   right: -24vw;
   bottom: -8vh;
   z-index: 0;
+  display: none;
 }
 
 .draw-on-load {
@@ -99,12 +100,13 @@
 
 
 @media (min-width: 600px) {
-  .hero-swirl {
+  /* .hero-swirl {
+    display: block;
     height: 90vh;
     width: 100vw;
     bottom: 0vh;
     right: -24vw;
-  }
+  } */
 
   .hero-info {
     margin-top: 10vh;
@@ -128,6 +130,7 @@
 
 @media (min-width: 1000px) {
   .hero-swirl {
+    display: block;
     height: 90vh;
     width: 100vw;
     bottom: 0;
