@@ -1,4 +1,4 @@
-import Nav from '../components/Nav';
+import Nav from '../layout/Nav';
 import Hero from '../components/Hero';
 
 function HomePage() {
