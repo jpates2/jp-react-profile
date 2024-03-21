@@ -1,9 +1,8 @@
 .about-line {
-  height: 200vh;
+  height: 100%;
   width: 1rem;
   background-color: var(--yellow);
   border-radius: 4px;
   position: absolute;
-  /* margin-left: 2rem; */
   z-index: 0;
 }

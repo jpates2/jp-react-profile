@@ -1,0 +1,13 @@
+.about-box {
+  max-width: 24rem;
+  padding: 2rem;
+  border: 2px var(--orange) solid;
+  border-radius: 4px;
+  background-color: rgb(245, 138, 7, 0.1);
+}
+
+.about-box h2 {
+  margin-top: 0;
+  font-family: "Permanent Marker";
+  color: var(--orange);
+}
