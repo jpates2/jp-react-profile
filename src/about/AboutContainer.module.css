@@ -56,6 +56,10 @@
     padding: 2rem;
   }
 
+  .about-section h1 {
+    margin-left: 4rem;
+  }
+
   .about-content-mobile {
     display: none;
   }

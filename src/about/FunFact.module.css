@@ -12,10 +12,11 @@
 
 .fun-fact-text {
   margin: 0;
+  font-weight: bold;
 }
 
 @media (min-width: 800px) {
   .fun-fact-container {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 }
