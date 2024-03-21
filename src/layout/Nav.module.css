@@ -1,5 +1,13 @@
 @import "../styles/variables.css";
 
+.mobile-nav {
+  position: relative;
+}
+
+.mobile-navbar {
+  position: relative;
+}
+
 .desk-navbar {
   display: none;
 }
@@ -12,6 +20,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  z-index: 100;
 }
 
 .hamburger-top,
@@ -35,8 +44,27 @@
   transform: translateY(1rem);
 }
 
+.mobile-menu-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  border-bottom-left-radius: 400px;
+  background: var(--orange);
+  z-index: 50;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 6rem;
+  font-family: "Permanent Marker";
+  color: white;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
 @media (min-width: 600px) {
-  .mobile-navbar {
+  .mobile-nav {
     display: none;
   }
 
