@@ -9,14 +9,17 @@
 
 .about-box-marker {
   position: absolute;
-  top: 130%;
-  /* background: orange;
-  height: 4px;
-  width: 100%; */
+  top: 110%;
 }
 
 .about-box h2 {
   margin-top: 0;
   font-family: "Permanent Marker";
   color: var(--orange);
+}
+
+@media (min-width: 1000px) {
+  .about-box-marker {
+    top: 130%;
+  }
 }

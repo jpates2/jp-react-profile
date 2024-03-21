@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { rgb } from "polished";
 import classes from "./Nav.module.css";
 import styles from "../styles/shared.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -48,28 +47,8 @@ const mobileMenu = {
   }
 }
 
-const linkVariant = {
-  opened: {
-    opacity: 1,
-    y: "0%",
-    transition: {
-      duration: 0.65,
-      ease: "easeOut"
-    }
-  },
-  closed: {
-    opacity: 0,
-    y: "100%",
-    transition: {
-      duration: 0.25,
-      ease: "easeInOut"
-    }
-  }
-}
-
 function Nav() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  console.log(mobileNavOpen);
 
   const mobileNav = (
     <div className={classes["mobile-nav"]}>

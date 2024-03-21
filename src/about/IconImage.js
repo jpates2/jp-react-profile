@@ -5,9 +5,9 @@ import profileImg from '../images/bitmoji1.png';
 function IconImage({ lineHeight }) {
   const { scrollY } = useScroll();
 
-  const yRange = [0, lineHeight];
+  const yRange = [0, lineHeight * 0.95];
   const rotationRange = [-720, 720];
-  const translateYRange = [0, lineHeight];
+  const translateYRange = [0, lineHeight * 0.95];
 
   const rotation = useTransform(scrollY, yRange, rotationRange);
   const translateY = useTransform(scrollY, yRange, translateYRange);
