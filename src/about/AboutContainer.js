@@ -1,36 +1,11 @@
 import classes from "./AboutContainer.module.css";
+import { motion } from "framer-motion";
 import Slider from "./Slider";
 import AboutBox from "./AboutBox";
 import FunFacts from "./FunFacts";
 import { AboutInfo } from "../info/about-info";
 
 function AboutContainer() {
-  // const [activeBox, setActiveBox] = useState("about1");
-
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const handleScroll = () => {
-  //     const position = window.scrollY;
-  //     setScrollPosition(position);
-  // };
-
-  // useEffect(() => {
-  //     window.addEventListener('scroll', handleScroll, { passive: true });
-
-  //     return () => {
-  //         window.removeEventListener('scroll', handleScroll);
-  //     };
-  // }, []);
-
-  // const [boxPositions, setBoxPositions] = useState({});
-  // console.log(boxPositions);
-
-  // const handlePositionChange = (title, position) => {
-  //   setBoxPositions((prevPositions) => ({
-  //     ...prevPositions,
-  //     [title]: position,
-  //   }));
-  // };
-
   const boxes = AboutInfo.map((box) => (
     <AboutBox
       title={box.title}
@@ -82,11 +57,19 @@ function AboutContainer() {
 
   return (
     <>
-      <div className={classes["about-section"]}>
+      <motion.div
+        className={classes["about-section"]}
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        transition={{
+          duration: 0.9,
+          ease: [0.17, 0.55, 0.55, 1],
+        }}
+      >
         <h1>About</h1>
         {desktopBoxesView}
         {mobileBoxesView}
-      </div>
+      </motion.div>
       <FunFacts />
     </>
   )
