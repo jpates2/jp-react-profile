@@ -3,4 +3,11 @@
   display: flex;
   justify-content: center;
   position: relative;
+  margin-right: 2rem;
+}
+
+@media (min-width: 800px) {
+  .slider-section {
+    margin-right: 0;
+  }
 }

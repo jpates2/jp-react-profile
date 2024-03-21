@@ -33,18 +33,32 @@ function AboutContainer() {
     />
   ));
 
+  const mobileBoxesView = (
+    <div className={classes["about-content-mobile"]}>
+      <Slider />
+      <div className={classes["about-grid-mobile"]}>
+        {boxes}
+      </div>
+    </div>
+  )
+
+  const desktopBoxesView = (
+    <div className={classes["about-content-desktop"]}>
+      <div className={classes["about-grid-left"]}>
+        {leftBoxes}
+      </div>
+      <Slider />
+      <div className={classes["about-grid-right"]}>
+      {rightBoxes}
+      </div>
+    </div>
+  )
+
   return (
     <div className={classes["about-section"]}>
       <h1>About</h1>
-      <div className={classes["about-content"]}>
-        <div className={classes["about-grid-left"]}>
-          {leftBoxes}
-        </div>
-        <Slider />
-        <div className={classes["about-grid-right"]}>
-        {rightBoxes}
-        </div>
-      </div>
+      {desktopBoxesView}
+      {mobileBoxesView}
       <div className={classes["fun-facts"]}>
         <h2>Fun Facts</h2>
       </div>

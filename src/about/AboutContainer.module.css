@@ -1,5 +1,5 @@
 .about-section {
-  padding: 2rem;
+  padding: 2rem 1rem;
   margin-bottom: 4rem;
 }
 
@@ -9,12 +9,18 @@
   margin-top: 0;
 }
 
-.about-content {
+.about-content-mobile {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.about-grid-mobile {
+  display: grid;
   gap: 2rem;
-  width: 100%;
-  margin: 0 auto;
+}
+
+.about-content-desktop {
+  display: none;
 }
 
 .about-grid-left,
@@ -43,4 +49,22 @@
 
 .fun-facts {
   height: 40vh;
+}
+
+@media (min-width: 800px) {
+  .about-section {
+    padding: 2rem;
+  }
+
+  .about-content-mobile {
+    display: none;
+  }
+
+  .about-content-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
