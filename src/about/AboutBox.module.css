@@ -3,7 +3,16 @@
   padding: 2rem;
   border: 2px var(--orange) solid;
   border-radius: 4px;
-  background-color: rgb(245, 138, 7, 0.1);
+  background-color: rgb(245, 138, 7, 0.05);
+  position: relative;
+}
+
+.about-box-marker {
+  position: absolute;
+  top: 130%;
+  /* background: orange;
+  height: 4px;
+  width: 100%; */
 }
 
 .about-box h2 {
