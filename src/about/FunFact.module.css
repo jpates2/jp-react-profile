@@ -1,0 +1,21 @@
+.fun-fact-container {
+  border: 2px solid var(--yellow);
+  border-radius: 4px;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 12rem;
+  justify-self: center;
+}
+
+.fun-fact-text {
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  .fun-fact-container {
+    padding: 2rem;
+  }
+}

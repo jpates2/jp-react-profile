@@ -1,8 +1,8 @@
 import classes from "./AboutContainer.module.css";
 import Slider from "./Slider";
 import AboutBox from "./AboutBox";
+import FunFacts from "./FunFacts";
 import { AboutInfo } from "../info/about-info";
-
 
 function AboutContainer() {
   const boxes = AboutInfo.map((box, index) => (
@@ -55,14 +55,14 @@ function AboutContainer() {
   )
 
   return (
-    <div className={classes["about-section"]}>
-      <h1>About</h1>
-      {desktopBoxesView}
-      {mobileBoxesView}
-      <div className={classes["fun-facts"]}>
-        <h2>Fun Facts</h2>
+    <>
+      <div className={classes["about-section"]}>
+        <h1>About</h1>
+        {desktopBoxesView}
+        {mobileBoxesView}
       </div>
-    </div>
+      <FunFacts />
+    </>
   )
 }
 
