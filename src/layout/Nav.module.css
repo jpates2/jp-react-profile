@@ -4,6 +4,36 @@
   display: none;
 }
 
+.hamburger {
+  all: unset;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 1.5rem;
+  height: 0.2rem;
+  top: 0;
+  left: 0;
+  background: var(--yellow);
+  border-radius: 8px;
+  transform: rotate(0);
+}
+
+.hamburger-middle {
+  transform: translateY(0.5rem);
+}
+
+.hamburger-bottom {
+  transform: translateY(1rem);
+}
 
 @media (min-width: 600px) {
   .mobile-navbar {
