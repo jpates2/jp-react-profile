@@ -5,6 +5,7 @@ import Slider from "./Slider";
 import AboutBox from "./AboutBox";
 import FunFacts from "./FunFacts";
 import { AboutInfo } from "../info/about-info";
+import Footer from "../layout/Footer";
 
 function AboutContainer() {
   const boxes = AboutInfo.map((box) => (
@@ -75,6 +76,7 @@ function AboutContainer() {
         {mobileBoxesView}
       </motion.div>
       <FunFacts />
+      <Footer />
     </>
   )
 }
