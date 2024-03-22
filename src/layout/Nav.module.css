@@ -47,8 +47,9 @@
 .mobile-menu-container {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   border-bottom-left-radius: 400px;
+  /* margin-top: -5vh; */
   background: var(--orange);
   z-index: 50;
 }

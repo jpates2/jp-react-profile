@@ -1,14 +1,23 @@
 .about-section {
   padding: 2rem 1rem;
-  margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+.about-head {
+  position: relative;
 }
 
 .about-section h1 {
   font-family: "Permanent Marker";
   font-size: 4rem;
-  margin-top: 0;
   margin-bottom: 4rem;
+}
+
+.about-head-underline {
+  width: 12rem;
+  position: absolute;
+  top: 5rem;
+  z-index: 0;
 }
 
 .about-content-mobile {
@@ -53,15 +62,30 @@
   height: 40vh;
 }
 
+@media (min-width:600px)  {
+  .about-section h1 {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+
+  .about-head-underline {
+    top: 5rem;
+    left: 4rem;
+  }
+}
+
 @media (min-width: 800px) {
   .about-section {
-    margin-top: 0;
     padding: 2rem;
   }
 
   .about-section h1 {
-    margin-left: 4rem;
     font-size: 5rem;
+  }
+
+  .about-head-underline {
+    width: 14rem;
+    top: 6rem;
   }
 
   .about-content-mobile {
