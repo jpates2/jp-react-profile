@@ -57,7 +57,7 @@ function Project({ id, title, text, languages, link, github, image }) {
       variants={projectClass === classes["project-right"] ? rightProjectVariant : leftProjectVariant}
     >
       <div className={`${classes["project-text"]} ${textClass}`}>
-        <h3 ref={projectRef}>{title}</h3>
+        <h3 ref={projectRef} className={classes["project-header"]}>{title}</h3>
         <p>{langs}</p>
         <div className={classes["project-links"]}>
           <a href={link} target="_blank" rel="noreferrer">
@@ -69,7 +69,7 @@ function Project({ id, title, text, languages, link, github, image }) {
         </div>
       </div>
       <div className={`${classes["project-img-container"]} ${imageClass}`}>
-        {image && <img src={image} alt="project main screenshot" />}
+        <img src={image} alt="project main screenshot" className={classes["project-img"]} />
       </div>
     </motion.div>
   )

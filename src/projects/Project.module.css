@@ -3,16 +3,35 @@
   grid-template-columns: 1fr 1fr;
   max-width: 40rem;
   positon: relative;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  border-bottom: 2px solid var(--yellow);
 }
 
-.project-container h3 {
+.project-header {
   font-family: "Permanent Marker";
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 
-.project-img-container img {
-  width: 16rem;
+.project-header:hover {
+  cursor: pointer;
+}
+
+/* .project-img-container {
+  overflow: hidden;
+} */
+
+.project-img {
+  width: 12rem;
+  filter: saturate(80%);
+}
+
+.project-img:hover {
+  filter: saturate(100%);
+  scale: 1.05;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .project-left {
@@ -23,19 +42,33 @@
   text-align: right;
 }
 
-.project-left-image {
-  margin-left: 2rem;
-}
-
-.project-text {
-
-}
-
 .project-links {
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   width: 4rem;
-  /* direction: ltr; */
-  /* color: var(--yellow); */
+}
+
+@media (min-width: 800px) {
+  .project-container  {
+    margin-bottom: 0;
+  }
+
+  .project-header {
+    font-size: 1.2rem;
+  }
+
+  .project-left-image {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-header {
+    font-size: 2rem;
+  }
+
+  .project-img-container img {
+    width: 16rem;
+  }
 }
