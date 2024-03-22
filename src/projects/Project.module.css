@@ -1,7 +1,9 @@
 .project-container {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  max-width: 40rem;
+  max-width: 32rem;
+  margin: 0 auto;
   positon: relative;
   padding-bottom: 4rem;
   padding-top: 4rem;
@@ -42,6 +44,18 @@
   text-align: right;
 }
 
+.project-left-image {
+  justify-self: end;
+}
+
+.project-right-image {
+  justify-self: end;
+}
+
+.project-right-text {
+  justify-self: start;
+}
+
 .project-links {
   font-size: 1.5rem;
   display: flex;
@@ -52,14 +66,12 @@
 @media (min-width: 800px) {
   .project-container  {
     margin-bottom: 0;
+    max-width: 48rem;
+
   }
 
   .project-header {
     font-size: 1.2rem;
-  }
-
-  .project-left-image {
-    margin-left: 2rem;
   }
 }
 
