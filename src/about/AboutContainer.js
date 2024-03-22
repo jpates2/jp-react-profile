@@ -76,7 +76,6 @@ function AboutContainer() {
         {mobileBoxesView}
       </motion.div>
       <FunFacts />
-      <Footer />
     </>
   )
 }

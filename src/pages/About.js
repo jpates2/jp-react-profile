@@ -1,4 +1,5 @@
 import AboutContainer from "../about/AboutContainer";
+import Footer from "../layout/Footer";
 import Nav from "../layout/Nav";
 
 function AboutPage() {
@@ -6,6 +7,7 @@ function AboutPage() {
     <>
       <Nav />
       <AboutContainer />
+      <Footer />
     </>
   );
 }
