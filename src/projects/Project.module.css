@@ -1,0 +1,41 @@
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 40rem;
+  positon: relative;
+}
+
+.project-container h3 {
+  font-family: "Permanent Marker";
+  font-size: 2rem;
+  margin: 0;
+}
+
+.project-img-container img {
+  width: 16rem;
+}
+
+.project-left {
+  direction: rtl;
+}
+
+.project-left-text {
+  text-align: right;
+}
+
+.project-left-image {
+  margin-left: 2rem;
+}
+
+.project-text {
+
+}
+
+.project-links {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 4rem;
+  /* direction: ltr; */
+  /* color: var(--yellow); */
+}
