@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import classes from "./Nav.module.css";
@@ -49,6 +49,15 @@ const mobileMenu = {
 
 function Nav() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [activePage, setActivePage] = useState("");
+  const location = useLocation();
+
+  useState(() => {
+    const path = location.pathname;
+    setActivePage(path);
+  }, [location]);
+
+  console.log(activePage);
 
   const mobileNav = (
     <div className={classes["mobile-nav"]}>
@@ -98,7 +107,7 @@ function Nav() {
               <div>About</div>
             </Link>
             <Link to="/projects" onClick={() => setMobileNavOpen(prevState => !prevState)}>
-              <div>Projects</div>
+              <div>Portfolio</div>
             </Link>
             <Link to="/stack" onClick={() => setMobileNavOpen(prevState => !prevState)}>
               <div>Stack</div>
@@ -114,26 +123,26 @@ function Nav() {
 
   const deskNav = (
     <>
-    <div className={classes["desk-navbar"]}>
-      <Link to="/">
-        <FontAwesomeIcon icon={faHouse}  className={classes["desk-navbar-icon"]}/>
-      </Link>
-      <div className={classes["desk-navbar-list"]}>
-        <Link to="/about">
-          <div className={classes["desk-navbar-list-item"]}>About</div>
+      <div className={classes["desk-navbar"]}>
+        <Link to="/">
+          <FontAwesomeIcon icon={faHouse} className={classes["desk-navbar-icon"]} />
         </Link>
-        <Link to="/projects">
-          <div className={classes["desk-navbar-list-item"]}>Projects</div>
-        </Link>
-        <Link to="/stack">
-          <div className={classes["desk-navbar-list-item"]}>Stack</div>
-        </Link>
-        <Link to="/contact">
-          <div className={classes["desk-navbar-list-item"]}>Contact</div>
-        </Link>
+        <div className={classes["desk-navbar-list"]}>
+          <div className={activePage === "/about" ? classes["active-navbar"] : classes["inactive-navbar"]}>
+            <Link to="/about">About</Link>
+          </div>
+          <div className={activePage === "/projects" ? classes["active-navbar"] : classes["inactive-navbar"]}>
+            <Link to="/projects">Portfolio</Link>
+          </div>
+          <Link to="/stack">
+            <div className={activePage === "/stack" ? classes["active-navbar"] : classes["inactive-navbar"]}>Stack</div>
+          </Link>
+          <Link to="/contact">
+            <div className={activePage === "/contact" ? classes["active-navbar"] : classes["inactive-navbar"]}>Contact</div>
+          </Link>
+        </div>
       </div>
-    </div>
-  </>
+    </>
   )
 
   return (

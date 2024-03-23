@@ -12,6 +12,16 @@
   display: none;
 }
 
+.active-navbar {
+  border-bottom: 4px solid var(--yellow);
+  padding-bottom: 0.2rem;
+}
+
+.inactive-navbar {
+  border-bottom: 4px solid white;
+  padding-bottom: 0.2rem;
+}
+
 .hamburger {
   all: unset;
   cursor: pointer;
@@ -49,7 +59,6 @@
   width: 100vw;
   height: 150vh;
   border-bottom-left-radius: 400px;
-  /* margin-top: -5vh; */
   background: var(--orange);
   z-index: 50;
 }
