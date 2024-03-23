@@ -1,15 +1,4 @@
-.about-section {
-  padding: 2rem 1rem;
-  margin-bottom: 4rem;
-}
-
-.about-head {
-  position: relative;
-}
-
 .about-section h1 {
-  font-family: "Permanent Marker";
-  font-size: 4rem;
   margin-bottom: 4rem;
 }
 
@@ -63,11 +52,6 @@
 }
 
 @media (min-width:600px)  {
-  .about-section h1 {
-    margin-top: 2rem;
-    margin-left: 4rem;
-  }
-
   .about-head-underline {
     top: 5rem;
     left: 4rem;
@@ -75,14 +59,6 @@
 }
 
 @media (min-width: 800px) {
-  .about-section {
-    padding: 2rem;
-  }
-
-  .about-section h1 {
-    font-size: 5rem;
-  }
-
   .about-head-underline {
     width: 14rem;
     top: 6rem;

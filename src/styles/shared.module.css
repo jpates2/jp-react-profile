@@ -3,6 +3,37 @@ a {
   color: inherit;
 }
 
+.page-header-section {
+  position: relative;
+}
+
+.page-header {
+  font-family: "Permanent Marker";
+  font-size: 4rem;
+}
+
+.page-section {
+  padding: 2rem 1rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width:600px)  {
+  .page-header {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .page-header {
+    font-size: 5rem;
+  }
+
+  .page-section {
+    padding: 2rem;
+  }
+}
+
 .draw-on-load {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
