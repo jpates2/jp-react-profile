@@ -1,5 +1,5 @@
 .languages-section {
-  height: 70vh;
+  height: 60vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -36,20 +36,20 @@
 }
 
 .languages-list-js {
-  top: 35%;
+  top: 38%;
   left: 15%;
   font-size: 3rem;
   color: var(--orange);
 }
 
 .languages-list-html {
-  top: 50%;
+  top: 55%;
   left: 5%;
   font-size: 2.5rem;
 }
 
 .languages-list-css {
-  top: 55%;
+  top: 60%;
   left: 75%;
   font-size: 2.5rem;
   color: var(--orange);
@@ -96,13 +96,13 @@
 }
 
 .languages-list-heroku {
-  top: 75%;
+  top: 80%;
   left: 25%;
   font-size: 1.5rem;
 }
 
 .languages-list-github {
-  top: 62%;
+  top: 68%;
   left: 35%;
   font-size: 2rem;
 }
