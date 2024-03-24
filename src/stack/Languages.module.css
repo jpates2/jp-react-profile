@@ -37,73 +37,73 @@
 
 .languages-list-js {
   top: 35%;
-  left: 20%;
+  left: 15%;
   font-size: 3rem;
   color: var(--orange);
 }
 
 .languages-list-html {
   top: 50%;
-  left: 10%;
+  left: 5%;
   font-size: 2.5rem;
 }
 
 .languages-list-css {
   top: 55%;
-  left: 80%;
+  left: 75%;
   font-size: 2.5rem;
   color: var(--orange);
 }
 
 .languages-list-tail {
   top: 90%;
-  left: 5%;
+  left: 0%;
   font-size: 2rem;
   color: var(--orange);
 }
 
 .languages-list-ruby {
   top: 15%;
-  left: 5%;
+  left: 0%;
   font-size: 2.5rem;
   color: var(--yellow);
 }
 
 .languages-list-react {
   top: 25%;
-  left: 45%;
+  left: 40%;
   font-size: 2.5rem;
   color: var(--yellow);
 }
 
 .languages-list-boot {
   top: 85%;
-  left: 65%;
+  left: 60%;
   font-size: 1.5rem;
   color: var(--yellow);
 }
 
 .languages-list-ts {
   top: 10%;
-  left: 55%;
+  left: 50%;
   font-size: 2rem;
 }
 
 .languages-list-sql {
   top: 5%;
-  left: 30%;
+  left: 25%;
   font-size: 1.5rem;
 }
 
 .languages-list-heroku {
   top: 75%;
-  left: 30%;
+  left: 25%;
   font-size: 1.5rem;
 }
 
 .languages-list-github {
   top: 62%;
-  left: 40%;
+  left: 35%;
   font-size: 2rem;
 }
 
