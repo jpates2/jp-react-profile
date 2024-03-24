@@ -57,9 +57,9 @@ function Project({ id, title, text, languages, link, github, image }) {
       variants={projectClass === classes["project-right"] ? rightProjectVariant : leftProjectVariant}
     >
       <div className={`${classes["project-text"]} ${textClass}`}>
-        <h3 ref={projectRef} className={classes["project-header"]}>{title}</h3>
+        <h3 className={classes["project-header"]}>{title}</h3>
         <p>{langs}</p>
-        <div className={classes["project-links"]}>
+        <div ref={projectRef} className={classes["project-links"]}>
           <a href={link} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLink} className={classes["project-link"]}/>
           </a>
