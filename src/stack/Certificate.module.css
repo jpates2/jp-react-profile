@@ -1,6 +1,6 @@
 .certificate-container {
   position: relative;
-  height: 12rem;
+  height: 16rem;
 }
 
 .certificate-header {
@@ -9,11 +9,19 @@
 
 .certificate-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  width: 100%;
 }
 
 .certificate-info-type {
   font-style: italic;
+}
+
+.certificate-provider {
+  margin-bottom: 1rem;
 }
 
 .certificate-image-container {
@@ -31,4 +39,20 @@
   height: 0.1rem;
   margin: 0 auto;
   background-color: var(--yellow);
+}
+
+@media (min-width: 800px) {
+  .certificate-container {
+    position: relative;
+    height: 12rem;
+  }
+
+  .certificate-info {
+    left: 0%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certificate-provider {
+    margin-bottom: 0;
+  }
 }
