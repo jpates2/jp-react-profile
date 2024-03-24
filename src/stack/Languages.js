@@ -30,6 +30,7 @@ function Languages() {
   const languages = LanguagesInfo.map(lang => (
     <Language
       language={lang.language}
+      key={lang.language}
     />
   ))
 
