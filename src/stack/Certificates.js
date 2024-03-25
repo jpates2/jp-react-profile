@@ -1,6 +1,6 @@
 import classes from "./Certificates.module.css";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { CertsInfo } from "../info/certs-info";
 import Certificate from "./Certificate";
 
@@ -22,6 +22,23 @@ const certsVariant = {
 function Certificates() {
   const certsRef = useRef(null);
   const isInView = useInView(certsRef, { once: true });
+  const [activeCert, setActiveCert] = useState("");
+  const [showCert, setShowCert] = useState(false);
+
+  const openCertHandler = (id) => {
+    setShowCert(true);
+    setActiveCert((prevId) => {
+      if (prevId === id) {
+        return null;
+      }
+      return id;
+    })
+    console.log(activeCert);
+  }
+
+  const closeCertHandler = () => {
+    setShowCert(false);
+  }
 
   const certificates = CertsInfo.map(cert => (
     <Certificate
@@ -32,6 +49,11 @@ function Certificates() {
       date={cert.date}
       certificate={cert.certificate}
       link={cert.link}
+      onOpen={() => openCertHandler(cert.id)}
+      onClose={closeCertHandler}
+      isOpenCert={showCert}
+      isActiveCert={activeCert === cert.id}
+      activeCert={activeCert}
     />
   ))
 

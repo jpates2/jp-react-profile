@@ -41,6 +41,21 @@
   background-color: var(--yellow);
 }
 
+.certificate-link:hover {
+  cursor: pointer;
+}
+
+.certificate-image {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  max-width: 48rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
 @media (min-width: 800px) {
   .certificate-container {
     position: relative;
