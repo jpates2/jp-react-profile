@@ -10,16 +10,18 @@ function AboutContainer() {
   const boxes = AboutInfo.map((box) => (
     <AboutBox
       title={box.title}
-      text={box.text}
+      texts={box.texts}
       key={box.id}
+      id={box.id}
     />
   ));
 
   const leftBoxes = AboutInfo.filter((_, index) => index % 2 === 0).map((box, index) => (
     <AboutBox
       title={box.title}
-      text={box.text}
+      texts={box.texts}
       key={box.id}
+      id={box.id}
       className={classes["about-grid-item"]}
       gridArea={`item-${index * 2 + 1}`}
     />
@@ -28,8 +30,9 @@ function AboutContainer() {
   const rightBoxes = AboutInfo.filter((_, index) => index % 2 !== 0).map((box, index) => (
     <AboutBox
       title={box.title}
-      text={box.text}
+      texts={box.texts}
       key={box.id}
+      id={box.id}
       className={classes["about-grid-item"]}
       gridArea={`item-${index * 2 + 2}`}
     />

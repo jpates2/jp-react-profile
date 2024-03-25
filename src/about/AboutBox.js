@@ -2,10 +2,12 @@ import classes from "./AboutBox.module.css";
 import { useRef } from "react";
 import { useInView } from 'framer-motion';
 
-function AboutBox({ title, text, gridArea }) {
+function AboutBox({ id, title, texts, gridArea }) {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true });
-
+  const boxText = texts.map((text, index) => (
+    <p key={`${id}-${index}`}>{text}</p>
+  ))
   return (
     <div
       style={{
@@ -17,7 +19,7 @@ function AboutBox({ title, text, gridArea }) {
       className={classes["about-box"]}
     >
       <h2>{title}</h2>
-      <div>{text}</div>
+      <div>{boxText}</div>
       <div ref={titleRef} className={classes["about-box-marker"]}></div>
     </div>
   )

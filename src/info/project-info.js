@@ -61,3 +61,5 @@ export const ProjectInfo = [
     img: ron1
   }
 ]
+
+// Expanded upon minesweeper game within GameOn by implementing responsive design, timer and score. Top scores are maintained and fetched using an external database.
