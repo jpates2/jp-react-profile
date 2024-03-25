@@ -52,6 +52,21 @@
   font-size: 2.5rem;
 }
 
+.contact-details-icon:hover {
+  cursor: pointer;
+}
+
+.contact-cv-img {
+  z-index: 100;
+  position: absolute;
+  max-height: 80%;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
 @media (min-width: 600px)  {
   .contact-head-underline {
     top: 5rem;

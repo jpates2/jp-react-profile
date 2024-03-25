@@ -1,7 +1,9 @@
 import classes from "./ContactContainer.module.css";
 import styles from "../styles/shared.module.css";
-import { useRef } from "react";
-import { motion, useInView } from 'framer-motion';
+import ReactDOM from "react-dom";
+import { useRef, useState } from "react";
+import { motion } from 'framer-motion';
+import cv from "../images/jess_pates_cv.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +11,28 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Backdrop } from "../layout/Modal";
 
 function ContactContainer() {
   const contactRef = useRef(null);
-  const isInView = useInView(contactRef, { once: true });
+  const portalElement = document.querySelector("#overlays");
+  const [cvOpen, setCvOpen] = useState(false);
+
+  const openCvHandler = () => {
+    setCvOpen(true);
+  }
+
+  const closeCvHandler = () => {
+    setCvOpen(false);
+  }
+
+
+  const cvModal = (
+    <>
+      {ReactDOM.createPortal(<Backdrop onClose={closeCvHandler} />, portalElement)}
+      {ReactDOM.createPortal(<img src={cv} alt="certificate for course" className={classes["contact-cv-img"]}/>, portalElement)}
+    </>
+  )
 
   return (
     <>
@@ -54,10 +74,11 @@ function ContactContainer() {
           </a>
         </div>
         <div className={classes["contact-details"]}>
-          <FontAwesomeIcon icon={faFile} className={classes["contact-details-icon"]} />
+          <FontAwesomeIcon icon={faFile} className={classes["contact-details-icon"]} onClick={openCvHandler} />
         </div>
       </motion.div>
     </div>
+    {cvOpen && cvModal}
   </>
   )
 }
