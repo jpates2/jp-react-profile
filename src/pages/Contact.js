@@ -1,10 +1,13 @@
+import ContactContainer from "../contact/ContactContainer";
 import Nav from "../layout/Nav";
+import Footer from "../layout/Footer";
 
 function ContactPage() {
   return (
     <>
-    <Nav />
-      <div>Contact</div>
+      <Nav />
+      <ContactContainer />
+      <Footer />
     </>
   );
 }
