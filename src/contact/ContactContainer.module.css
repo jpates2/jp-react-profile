@@ -1,3 +1,7 @@
+.contact-section {
+  min-height: 65vh;
+}
+
 .contact-head-underline {
   width: 15rem;
   position: absolute;
@@ -31,7 +35,7 @@
 
 .contact-details-container {
   max-width: 12rem;
-  margin: 8rem auto 2rem auto;
+  margin: 9rem auto 2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 4rem;
@@ -56,7 +60,7 @@
 
   .contact-details-container {
     max-width: 32rem;
-    margin-top: 10rem;
+    margin-top: 12rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
