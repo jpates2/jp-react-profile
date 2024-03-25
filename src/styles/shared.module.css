@@ -48,6 +48,13 @@ a {
   animation-delay: 1.5s;
 }
 
+.draw-on-load-mid-delay {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
 .draw-on-load-long-delay {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
