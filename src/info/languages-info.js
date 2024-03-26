@@ -9,5 +9,6 @@ export const LanguagesInfo = [
   {language: "Github"},
   {language: "Bootstrap"},
   {language: "Heroku"},
-  {language: "SQL"}
+  {language: "SQL"},
+  {language: "Figma"}
 ]
