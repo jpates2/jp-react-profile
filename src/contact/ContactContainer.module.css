@@ -58,7 +58,7 @@
 
 .contact-cv-img {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   max-height: 80%;
   max-width: 100%;
   top: 50%;
