@@ -33,7 +33,6 @@ const rightProjectVariant = {
 }
 
 function Project({ id, title, text, languages, link, github, image }) {
-  console.log(title);
   const projectRef = useRef(null);
   const isInView = useInView(projectRef, { once: true });
   const langs = languages.join(" | ");

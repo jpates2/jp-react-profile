@@ -1,4 +1,4 @@
-import classes from "./ProjectContainer.module.css";
+import classes from "./ProjectsContainer.module.css";
 import styles from "../styles/shared.module.css";
 import { motion } from "framer-motion";
 import { ProjectInfo } from "../info/project-info";

@@ -1,12 +1,12 @@
 import Nav from "../layout/Nav";
-import ProjectContainer from "../projects/ProjectContainer";
+import ProjectsContainer from "../projects/ProjectsContainer";
 import Footer from "../layout/Footer";
 
 function ProjectsPage() {
   return (
     <>
       <Nav />
-      <ProjectContainer />
+      <ProjectsContainer />
       <Footer />
     </>
   );

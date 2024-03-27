@@ -1,0 +1,69 @@
+.project-header {
+  font-family: "Permanent Marker";
+  font-size: 4rem;
+  text-align: center;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-image-portrait {
+  max-height: 24rem;
+}
+
+.project-image-landscape {
+  max-width: 100%;
+}
+
+.project-info-text p:first-child {
+  margin-top: 0;
+}
+
+.project-languages {
+  margin-bottom: 2rem;
+}
+
+.project-languages h5 {
+  font-family: "Permanent Marker";
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.project-links {
+  width: 4rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width:600px)  {
+  .project-header {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .project-header {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-details {
+    display: flex;
+    flex-direction: row;
+    gap: 6vw;
+    max-width: 56rem;
+  }
+
+  .project-image-landscape {
+    max-width: 24rem;
+  }
+}
