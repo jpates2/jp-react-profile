@@ -5,6 +5,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { useRef } from "react";
 import { useInView } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const leftProjectVariant = {
   in: {
@@ -32,6 +33,7 @@ const rightProjectVariant = {
 }
 
 function Project({ id, title, text, languages, link, github, image }) {
+  console.log(title);
   const projectRef = useRef(null);
   const isInView = useInView(projectRef, { once: true });
   const langs = languages.join(" | ");
@@ -45,19 +47,12 @@ function Project({ id, title, text, languages, link, github, image }) {
   return (
     <motion.div
       className={`${classes["project-container"]} ${projectClass}`}
-      // initial={{ x: projectClass === classes["project-right"] ? '100%' : '-100%' }}
-
-      // animate={{ x: 0 }}
-      // style={{
-      //   // opacity: isInView ? 1 : 0,
-      //   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
-      // }}
       initial="out"
       animate={isInView ? "in" : "out"}
       variants={projectClass === classes["project-right"] ? rightProjectVariant : leftProjectVariant}
     >
       <div className={`${classes["project-text"]} ${textClass}`}>
-        <h3 className={classes["project-header"]}>{title}</h3>
+        <h3 className={classes["project-header"]}><Link to={`/projects/${title.replaceAll(" ", "").toLowerCase()}`}>{title}</Link></h3>
         <p>{langs}</p>
         <div ref={projectRef} className={classes["project-links"]}>
           <a href={link} target="_blank" rel="noreferrer">
@@ -69,7 +64,7 @@ function Project({ id, title, text, languages, link, github, image }) {
         </div>
       </div>
       <div className={`${classes["project-img-container"]} ${imageClass}`}>
-        <img src={image} alt="project main screenshot" className={classes["project-img"]} />
+      <Link to={`/projects/${title.replaceAll(" ", "").toLowerCase()}`}><img src={image} alt="project main screenshot" className={classes["project-img"]} /></Link>
       </div>
     </motion.div>
   )
