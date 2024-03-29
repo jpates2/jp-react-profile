@@ -57,8 +57,6 @@ function Nav() {
     setActivePage(path);
   }, [location]);
 
-  console.log(activePage);
-
   const mobileNav = (
     <div className={classes["mobile-nav"]}>
       <div className={classes["mobile-navbar"]}>
