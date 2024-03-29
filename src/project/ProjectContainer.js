@@ -1,5 +1,6 @@
 import classes from "./ProjectContainer.module.css";
 import styles from "../styles/shared.module.css";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +15,7 @@ function ProjectContainer({ project }) {
 
   return (
     <>
-    <motion.div className={styles["page-section"]}>
+      <motion.div className={styles["page-section"]}>
         <h1 className={classes["project-header"]}>{project.title}</h1>
         <div className={classes["project-details"]}>
           <div className={classes[`project-images-container-${project.orientation}`]}>
@@ -37,9 +38,10 @@ function ProjectContainer({ project }) {
               </a>
             </div>
           </div>
+          <Link to="/projects"><button className={classes["project-back-button"]}>Back to Portfolio</button></Link>
         </div>
-    </motion.div>
-  </>
+      </motion.div>
+    </>
   )
 }
 

@@ -12,6 +12,7 @@
   max-width: 32rem;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
 }
 
 .project-info-text p:first-child {
@@ -43,9 +44,22 @@
   width: 15rem;
 }
 
+.project-back-button {
+  all: unset;
+  font-family: "Permanent Marker";
+  margin-top: 2rem;
+}
+
 @media (min-width:600px)  {
   .project-header {
     margin-top: 2rem;
+  }
+
+  .project-back-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 0;
   }
 }
 
