@@ -1,0 +1,51 @@
+.project-image-portrait {
+  overflow: hidden;
+  max-width: 10rem;
+  text-align: center;
+}
+
+.project-image-landscape {
+  overflow: hidden;
+  max-width: 15rem;
+  text-align: center;
+}
+
+.project-image_carousel-portrait {
+  height: 20rem;
+  width: 10rem;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.project-image_carousel-landscape {
+  height: 20rem;
+  width: 15rem;
+  line-height: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .project-image-portrait {
+    max-width: 15rem;
+  }
+
+  .project-image_carousel-portrait {
+    height: 30rem;
+    width: 15rem;
+  }
+/*
+  .project-image-landscape {
+    max-width: 15rem;
+  }
+
+  .project-image_carousel-landscape {
+    height: 20rem;
+    width: 15rem;
+  } */
+}
+
+/* @media (min-width: 1100px) {
+  .project-image-landscape {
+    max-width: 24rem;
+  }
+} */

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import ProjectImages from "./ProjectImages";
 
 function ProjectContainer({ project }) {
   const langs = project.languages.join(" | ");
@@ -11,15 +12,13 @@ function ProjectContainer({ project }) {
     <p key={`${project.id}-${idx}`}>{txt}</p>
   ))
 
-  const orientation = project.orientation;
-
   return (
     <>
     <motion.div className={styles["page-section"]}>
         <h1 className={classes["project-header"]}>{project.title}</h1>
         <div className={classes["project-details"]}>
-          <div>
-            <img className={`${classes[`project-image-${orientation}`]} ${classes["project-image"]}`} src={project.images[0]} alt="project screenshots" />
+          <div className={classes[`project-images-container-${project.orientation}`]}>
+            <ProjectImages images={project.images} orientation={project.orientation} />
           </div>
           <div className={classes["project-info"]}>
             <div className={classes["project-info-text"]}>
