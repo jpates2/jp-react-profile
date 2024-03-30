@@ -27,10 +27,12 @@ import pit5 from "../images/projects/pit5.png";
 import pit6 from "../images/projects/pit6.png";
 import game from "../images/projects/game.png";
 import game1 from "../images/projects/game1.png";
-import game2 from "../images/projects/game2.png";
 import game3 from "../images/projects/game3.png";
 import game4 from "../images/projects/game4.png";
 import game5 from "../images/projects/game5.png";
+import game6 from "../images/projects/game6.png";
+import game7 from "../images/projects/game7.png";
+import game8 from "../images/projects/game8.png";
 import ron from "../images/projects/ron.png";
 import ron1 from "../images/projects/ron1.png";
 import ron2 from "../images/projects/ron2.png";
@@ -39,6 +41,15 @@ import ron4 from "../images/projects/ron4.png";
 import ron5 from "../images/projects/ron5.png";
 import ron6 from "../images/projects/ron6.png";
 import ron7 from "../images/projects/ron7.png";
+import facprofile from "../images/projects/facprofile.png";
+import facprofile1 from "../images/projects/facprofile1.png";
+import facprofile2 from "../images/projects/facprofile2.png";
+import facprofile3 from "../images/projects/facprofile3.png";
+import facgame from "../images/projects/facgame.png";
+import facgame1 from "../images/projects/facgame1.png";
+import facgame2 from "../images/projects/facgame2.png";
+import facgame3 from "../images/projects/facgame3.png";
+import facgame4 from "../images/projects/facgame4.png";
 
 export const ProjectInfo = [
   {
@@ -104,7 +115,7 @@ export const ProjectInfo = [
     link: "https://gameon-ur5o.onrender.com/",
     github: "https://github.com/jpates2/gameon",
     img: game,
-    images: [game1, game2, game3, game5, game4],
+    images: [game1, game3, game5, game4, game6, game7, game8],
     orientation: "landscape"
   },
   {
@@ -119,7 +130,31 @@ export const ProjectInfo = [
     img: ron,
     images: [ron1, ron2, ron3, ron4, ron5, ron6, ron7],
     orientation: "portrait"
-  }
+  },
+  {
+    id: "project-7",
+    title: "FAC Profile",
+    paramTitle: "facprofile",
+    text: ["An alternative personal profile page. Outlines career aspirations and motivations behind seeking out software engineering roles.",
+    "Built as part of successful application to Founders and Coders Software Foundations course."],
+    languages: ["CSS", "HTML", "JavaScript"],
+    link: "https://jpates2.github.io/fac-profile/",
+    github: "https://github.com/jpates2/fac-profile",
+    img: facprofile,
+    images: [facprofile1, facprofile2, facprofile3],
+    orientation: "landscape"
+  },
+  {
+    id: "project-8",
+    title: "Bugsweeper",
+    paramTitle: "bugsweeper",
+    text: ["Expanded upon minesweeper game within GameOn by implementing responsive design, timer and score. Top scores are maintained and fetched using an external database.",
+    "Built as part of successful application to Founders and Coders Software Foundations course."],
+    languages: ["CSS", "HTML", "JavaScript"],
+    link: "https://jpates2.github.io/fac-game/",
+    github: "https://github.com/jpates2/fac-game",
+    img: facgame,
+    images: [facgame, facgame1, facgame2, facgame3, facgame4],
+    orientation: "landscape"
+  },
 ]
-
-// Expanded upon minesweeper game within GameOn by implementing responsive design, timer and score. Top scores are maintained and fetched using an external database.
