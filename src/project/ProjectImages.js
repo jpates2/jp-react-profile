@@ -17,7 +17,7 @@ function ProjectImages({ images, orientation }) {
 
     const interval = setInterval(() => {
       updateIndex(imageIndex + 1);
-    }, 3000);
+    }, 5000);
 
     return () => {
       if (interval) {

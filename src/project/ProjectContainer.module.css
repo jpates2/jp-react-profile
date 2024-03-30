@@ -11,8 +11,10 @@
   align-items: center;
   max-width: 32rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
   position: relative;
+  border-top: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
 }
 
 .project-info-text p:first-child {
@@ -57,8 +59,8 @@
 
   .project-back-button {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 2rem;
+    right: 2rem;
     margin-top: 0;
   }
 }
